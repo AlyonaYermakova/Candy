@@ -4,15 +4,6 @@ import java.math.BigDecimal;
 
 public abstract class Candy {
 
-    public enum Shape {
-        CONE, CUBE, SPHERE, PYRAMID, CYLINDER;
-
-        @Override
-        public String toString() {
-            return name().toLowerCase();
-        }
-        }
-
     protected long id;
     protected Shape candyShape;
     protected double sugarContent;
@@ -27,44 +18,53 @@ public abstract class Candy {
         this.price = price;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public long getId() {
         return id;
     }
 
-    public void setCandyShape(Shape candyShape) {
-        this.candyShape = candyShape;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public Shape getCandyShape() {
         return candyShape;
     }
 
-    public void setSugarContent(double sugarContent) {
-        this.sugarContent = sugarContent;
+    public void setCandyShape(Shape candyShape) {
+        this.candyShape = candyShape;
     }
 
     public double getSugarContent() {
         return sugarContent;
     }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
+    public void setSugarContent(double sugarContent) {
+        this.sugarContent = sugarContent;
     }
 
     public double getWeight() {
         return weight;
     }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
     public BigDecimal getPrice() {
         return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public enum Shape {
+        CONE, CUBE, SPHERE, PYRAMID, CYLINDER;
+
+        @Override
+        public String toString() {
+            return name().toLowerCase();
+        }
     }
 
 }

@@ -4,15 +4,6 @@ import java.math.BigDecimal;
 
 public class Caramel extends Candy {
 
-    public enum CaramelType {
-        LOLLIPOP, STUFFED, TOFFEE;
-
-        @Override
-        public String toString() {
-            return name().toLowerCase();
-        }
-    }
-
     protected double fruitContent;
     protected CaramelType caramelType;
 
@@ -43,4 +34,15 @@ public class Caramel extends Candy {
     public void setCaramelType(CaramelType caramelType) {
         this.caramelType = caramelType;
     }
+
+    public enum CaramelType {
+        LOLLIPOP, STUFFED, TOFFEE;
+
+        @Override
+        public String toString() {
+            return name().toLowerCase();
+        }
+    }
+
+
 }

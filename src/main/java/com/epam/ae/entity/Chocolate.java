@@ -4,15 +4,6 @@ import java.math.BigDecimal;
 
 public class Chocolate extends Candy {
 
-    public enum ChocolateType {
-        DARK, MILK, WHITE, DIABETIC;
-
-        @Override
-        public String toString() {
-            return name().toLowerCase();
-        }
-    }
-
     protected double cocoaContent;
     protected ChocolateType chocolateType;
 
@@ -42,5 +33,14 @@ public class Chocolate extends Candy {
 
     public void setChocolateType(ChocolateType chocolateType) {
         this.chocolateType = chocolateType;
+    }
+
+    public enum ChocolateType {
+        DARK, MILK, WHITE, DIABETIC;
+
+        @Override
+        public String toString() {
+            return name().toLowerCase();
+        }
     }
 }
