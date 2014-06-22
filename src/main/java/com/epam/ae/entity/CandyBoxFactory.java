@@ -14,7 +14,7 @@ public class CandyBoxFactory {
         return result;
     }
 
-   /* public static CandyBox createRandomCandyBox() {
-        return createRandomCandyBox(random.nextInt(10) + 2);
-    }*/
+    public static CandyBox createRandomCandyBox() {
+        return createRandomCandyBox(random.nextInt(10) + 1);
+    }
 }

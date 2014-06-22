@@ -1,7 +1,5 @@
 package com.epam.ae.entity;
 
-import com.epam.ae.entity.Candy;
-
 import java.math.BigDecimal;
 import java.util.Random;
 
@@ -16,7 +14,7 @@ public class CandyFactory {
         sugarContent = random.nextDouble();
         double weight;
         weight = random.nextDouble();
-        BigDecimal price = BigDecimal.valueOf(random.nextInt());
+        BigDecimal price = BigDecimal.valueOf(random.nextInt(100) + 5);
         double flourContent;
         flourContent = random.nextDouble();
         Waffle waffle = new Waffle(waffleShape, sugarContent, weight, price, flourContent);
@@ -29,7 +27,7 @@ public class CandyFactory {
         sugarContent = random.nextDouble();
         double weight;
         weight = random.nextDouble();
-        BigDecimal price = BigDecimal.valueOf(random.nextInt());
+        BigDecimal price = BigDecimal.valueOf(random.nextInt(100) + 5);
         double cocoaContent;
         cocoaContent = random.nextDouble();
         Chocolate.ChocolateType chocolateType = Chocolate.randomChocolateType();
@@ -43,7 +41,7 @@ public class CandyFactory {
         sugarContent = random.nextDouble();
         double weight;
         weight = random.nextDouble();
-        BigDecimal price = BigDecimal.valueOf(random.nextInt());
+        BigDecimal price = BigDecimal.valueOf(random.nextInt(100) + 5);
         double fruitContent;
         fruitContent = random.nextDouble();
         Caramel.CaramelType caramelType = Caramel.randomCaramelType();

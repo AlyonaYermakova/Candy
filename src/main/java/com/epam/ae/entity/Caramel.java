@@ -24,26 +24,10 @@ public class Caramel extends Candy {
         return CaramelType.values()[pick];
     }
 
-    public double getFruitContent() {
-        return fruitContent;
-    }
-
-    public void setFruitContent(double fruitContent) {
-        this.fruitContent = fruitContent;
-    }
-
-    public CaramelType getCaramelType() {
-        return caramelType;
-    }
-
-    public void setCaramelType(CaramelType caramelType) {
-        this.caramelType = caramelType;
-    }
-
     @Override
     public String toString() {
         return "Caramel{" +
-                "fruitContent=" + fruitContent +
+                "fruitContent=" + format.format(fruitContent) +
                 ", caramelType=" + caramelType + super.toString();
     }
 
@@ -56,50 +40,5 @@ public class Caramel extends Candy {
         }
     }
 
-    public static class Builder {
-        Shape candyShape;
-        double sugarContent;
-        double weight;
-        BigDecimal price;
-        double fruitContent;
-        CaramelType caramelType;
 
-        public Builder() {
-        }
-
-        public Builder candyShape(Shape val) {
-            candyShape = val;
-            return this;
-        }
-
-        public Builder sugarContent(double val) {
-            sugarContent = val;
-            return this;
-        }
-
-        public Builder weight(double val) {
-            weight = val;
-            return this;
-        }
-
-        public Builder price(BigDecimal val) {
-            price = val;
-            return this;
-        }
-
-        public Builder fruitContent(double val) {
-            fruitContent = val;
-            return this;
-        }
-
-        public Builder caramelType(CaramelType val) {
-            caramelType = val;
-            return this;
-        }
-
-        public Caramel build() {
-            return new Caramel(candyShape, sugarContent, weight, price, fruitContent, caramelType);
-        }
-
-    }
 }

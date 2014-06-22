@@ -1,10 +1,12 @@
 package com.epam.ae.entity;
 
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public abstract class Candy {
 
+    public DecimalFormat format = new DecimalFormat("###.##");
     private Shape candyShape;
     private double sugarContent;
     private double weight;
@@ -22,45 +24,13 @@ public abstract class Candy {
         return Shape.values()[pick];
     }
 
-    public Shape getCandyShape() {
-        return candyShape;
-    }
-
-    public void setCandyShape(Shape candyShape) {
-        this.candyShape = candyShape;
-    }
-
-    public double getSugarContent() {
-        return sugarContent;
-    }
-
-    public void setSugarContent(double sugarContent) {
-        this.sugarContent = sugarContent;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
-
     @Override
     public String toString() {
         return
                 ", candyShape=" + candyShape +
-                        ", sugarContent=" + sugarContent +
-                        ", weight=" + weight +
-                        ", price=" + price +
+                        ", sugarContent=" + format.format(sugarContent) +
+                        ", weight=" + format.format(weight) +
+                        ", price=" + format.format(price) +
                         '}' + "\n";
     }
 
