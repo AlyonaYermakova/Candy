@@ -1,29 +1,20 @@
 package com.epam.ae.entity;
 
 import java.math.BigDecimal;
+import java.util.Random;
 
 public abstract class Candy {
 
-    private long id;
     private Shape candyShape;
     private double sugarContent;
     private double weight;
     private BigDecimal price;
 
-    public Candy(long id, Shape candyShape, double sugarContent, double weight, BigDecimal price) {
-        this.id = id;
+    public Candy(Shape candyShape, double sugarContent, double weight, BigDecimal price) {
         this.candyShape = candyShape;
         this.sugarContent = sugarContent;
         this.weight = weight;
         this.price = price;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public Shape getCandyShape() {
@@ -58,6 +49,20 @@ public abstract class Candy {
         this.price = price;
     }
 
+    public static Shape randomShape () {
+        int pick = new Random().nextInt(Shape.values().length);
+        return Shape.values()[pick];
+    }
+    @Override
+    public String toString() {
+        return "Candy{" +
+                "candyShape=" + candyShape +
+                ", sugarContent=" + sugarContent +
+                ", weight=" + weight +
+                ", price=" + price +
+                '}';
+    }
+
     public enum Shape {
         CONE, CUBE, SPHERE, PYRAMID, CYLINDER;
 
@@ -66,5 +71,4 @@ public abstract class Candy {
             return name().toLowerCase();
         }
     }
-
 }
