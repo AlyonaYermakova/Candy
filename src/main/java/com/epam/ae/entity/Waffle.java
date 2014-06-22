@@ -27,9 +27,9 @@ public class Waffle extends Candy {
     @Override
     public String toString() {
         return "Waffle{" +
-                "flourContent=" + flourContent +
-                '}' + super.toString();
+                "flourContent=" + flourContent + super.toString();
     }
+
     public static class Builder {
         Shape candyShape;
         double sugarContent;
@@ -40,7 +40,7 @@ public class Waffle extends Candy {
         public Builder() {
         }
 
-         public Builder candyShape(Shape val) {
+        public Builder candyShape(Shape val) {
             candyShape = val;
             return this;
         }

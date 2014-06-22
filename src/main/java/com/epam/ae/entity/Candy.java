@@ -17,6 +17,11 @@ public abstract class Candy {
         this.price = price;
     }
 
+    public static Shape randomShape() {
+        int pick = new Random().nextInt(Shape.values().length);
+        return Shape.values()[pick];
+    }
+
     public Shape getCandyShape() {
         return candyShape;
     }
@@ -49,18 +54,14 @@ public abstract class Candy {
         this.price = price;
     }
 
-    public static Shape randomShape () {
-        int pick = new Random().nextInt(Shape.values().length);
-        return Shape.values()[pick];
-    }
     @Override
     public String toString() {
-        return "Candy{" +
-                "candyShape=" + candyShape +
-                ", sugarContent=" + sugarContent +
-                ", weight=" + weight +
-                ", price=" + price +
-                '}';
+        return
+                ", candyShape=" + candyShape +
+                        ", sugarContent=" + sugarContent +
+                        ", weight=" + weight +
+                        ", price=" + price +
+                        '}' + "\n";
     }
 
     public enum Shape {

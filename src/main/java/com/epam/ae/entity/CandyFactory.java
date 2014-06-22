@@ -8,7 +8,7 @@ import java.util.Random;
 public class CandyFactory {
 
     public static Random random = new Random();
-    private int a = random.nextInt(3);
+
 
     private static Waffle createRandomWaffle() {
         Waffle.Shape waffleShape = Candy.randomShape();
@@ -51,19 +51,20 @@ public class CandyFactory {
         return caramel;
     }
 
-    public void createRandomCandy() {
+    public static Candy createRandomCandy() {
+        int a = random.nextInt(3);
         switch (a) {
             case 0:
-                createRandomCaramel();
-                break;
-            case 1:
-                createRandomChocolate();
-                break;
-            case 2:
-                createRandomWaffle();
-                break;
-        }
+                return createRandomCaramel();
 
+            case 1:
+                return createRandomChocolate();
+
+            case 2:
+                return createRandomWaffle();
+
+        }
+        return createRandomCandy();
     }
 
 }

@@ -19,6 +19,11 @@ public class Chocolate extends Candy {
         this.chocolateType = chocolateType;
     }
 
+    public static ChocolateType randomChocolateType() {
+        int pick = new Random().nextInt(ChocolateType.values().length);
+        return ChocolateType.values()[pick];
+    }
+
     public double getCocoaContent() {
         return cocoaContent;
     }
@@ -35,17 +40,11 @@ public class Chocolate extends Candy {
         this.chocolateType = chocolateType;
     }
 
-    public static ChocolateType randomChocolateType () {
-        int pick = new Random().nextInt(ChocolateType.values().length);
-        return ChocolateType.values()[pick];
-    }
-
     @Override
     public String toString() {
         return "Chocolate{" +
                 "cocoaContent=" + cocoaContent +
-                ", chocolateType=" + chocolateType +
-                '}' + super.toString();
+                ", chocolateType=" + chocolateType + super.toString();
     }
 
     public enum ChocolateType {
@@ -58,7 +57,7 @@ public class Chocolate extends Candy {
     }
 
     public static class Builder {
-       Shape candyShape;
+        Shape candyShape;
         double sugarContent;
         double weight;
         BigDecimal price;
@@ -68,7 +67,7 @@ public class Chocolate extends Candy {
         public Builder() {
         }
 
-                public Builder candyShape(Shape val) {
+        public Builder candyShape(Shape val) {
             candyShape = val;
             return this;
         }

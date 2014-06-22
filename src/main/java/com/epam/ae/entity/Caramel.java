@@ -19,6 +19,11 @@ public class Caramel extends Candy {
         this.caramelType = caramelType;
     }
 
+    public static CaramelType randomCaramelType() {
+        int pick = new Random().nextInt(CaramelType.values().length);
+        return CaramelType.values()[pick];
+    }
+
     public double getFruitContent() {
         return fruitContent;
     }
@@ -35,17 +40,11 @@ public class Caramel extends Candy {
         this.caramelType = caramelType;
     }
 
-    public static CaramelType randomCaramelType () {
-        int pick = new Random().nextInt(CaramelType.values().length);
-        return CaramelType.values()[pick];
-    }
-
     @Override
     public String toString() {
         return "Caramel{" +
                 "fruitContent=" + fruitContent +
-                ", caramelType=" + caramelType +
-                '}' + super.toString();
+                ", caramelType=" + caramelType + super.toString();
     }
 
     public enum CaramelType {

@@ -6,12 +6,12 @@ import java.util.List;
 public class CandyBox {
     List<Candy> candies = new ArrayList<Candy>();
 
-    public CandyBox(long id, List<Candy> candies) {
+    public CandyBox() {
         this.candies = candies;
     }
 
-    public void addCandy(Candy candy) {
-        candies.add(candy);
+    public void addCandy(Candy c) {
+        candies.add(c);
     }
 
     public List<Candy> getCandies() {
@@ -20,5 +20,12 @@ public class CandyBox {
 
     public void setCandies(List<Candy> candies) {
         this.candies = candies;
+    }
+
+    @Override
+    public String toString() {
+        return "CandyBox{" +
+                "candies=" + candies +
+                '}';
     }
 }
