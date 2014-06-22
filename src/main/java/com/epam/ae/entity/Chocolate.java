@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 
 public class Chocolate extends Candy {
 
-    protected double cocoaContent;
-    protected ChocolateType chocolateType;
+    private double cocoaContent;
+    private ChocolateType chocolateType;
 
     public Chocolate(long id,
                      Shape candyShape,

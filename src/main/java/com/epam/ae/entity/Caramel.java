@@ -4,16 +4,10 @@ import java.math.BigDecimal;
 
 public class Caramel extends Candy {
 
-    protected double fruitContent;
-    protected CaramelType caramelType;
+    private double fruitContent;
+    private CaramelType caramelType;
 
-    public Caramel(long id,
-                   Shape candyShape,
-                   double sugarContent,
-                   double weight,
-                   BigDecimal price,
-                   double fruitContent,
-                   CaramelType caramelType) {
+    public Caramel() {
         super(id, candyShape, sugarContent, weight, price);
         this.fruitContent = fruitContent;
         this.caramelType = caramelType;

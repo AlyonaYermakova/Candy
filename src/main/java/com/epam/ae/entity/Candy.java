@@ -4,13 +4,13 @@ import java.math.BigDecimal;
 
 public abstract class Candy {
 
-    protected long id;
-    protected Shape candyShape;
-    protected double sugarContent;
-    protected double weight;
-    protected BigDecimal price;
+    private long id;
+    private Shape candyShape;
+    private double sugarContent;
+    private double weight;
+    private BigDecimal price;
 
-    protected Candy(long id, Shape candyShape, double sugarContent, double weight, BigDecimal price) {
+    public Candy(long id, Shape candyShape, double sugarContent, double weight, BigDecimal price) {
         this.id = id;
         this.candyShape = candyShape;
         this.sugarContent = sugarContent;
