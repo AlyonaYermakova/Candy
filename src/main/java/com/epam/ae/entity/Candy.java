@@ -4,7 +4,8 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.Random;
 
-public abstract class Candy {
+public abstract class Candy implements Cloneable {
+
 
     public DecimalFormat format = new DecimalFormat("###.##");
     private Shape candyShape;
@@ -22,6 +23,19 @@ public abstract class Candy {
     public static Shape randomShape() {
         int pick = new Random().nextInt(Shape.values().length);
         return Shape.values()[pick];
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public double getSugarContent() {
+        return sugarContent;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return (Candy) super.clone();
     }
 
     @Override
@@ -42,4 +56,6 @@ public abstract class Candy {
             return name().toLowerCase();
         }
     }
+
+
 }

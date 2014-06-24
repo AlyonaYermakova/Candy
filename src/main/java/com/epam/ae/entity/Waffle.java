@@ -16,6 +16,11 @@ public class Waffle extends Candy {
     }
 
     @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
     public String toString() {
         return "Waffle{" +
                 "flourContent=" + format.format(flourContent) + super.toString();

@@ -8,13 +8,13 @@ public class CandyBoxFactory {
     private CandyBoxFactory() {
     }
 
-    public static CandyBox createRandomCandyBox(int qt) {
+    public static CandyBox createRandomCandyBox(int qt) throws CloneNotSupportedException {
         CandyBox result = new CandyBox();
         for (int i = 0; i < qt; i++) result.addCandy(CandyFactory.createRandomCandy());
         return result;
     }
 
-    public static CandyBox createRandomCandyBox() {
+    public static CandyBox createRandomCandyBox() throws CloneNotSupportedException {
         return createRandomCandyBox(random.nextInt(10) + 1);
     }
 }

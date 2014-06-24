@@ -25,6 +25,11 @@ public class Caramel extends Candy {
     }
 
     @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
     public String toString() {
         return "Caramel{" +
                 "fruitContent=" + format.format(fruitContent) +
